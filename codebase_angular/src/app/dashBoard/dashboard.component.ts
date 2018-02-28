@@ -16,7 +16,8 @@ export class DashBoardComponent implements OnInit {
 
   constructor(public route: ActivatedRoute, public dashboardService: DashboardService) {
   }
-	
+
+ //Loads the employee status in Dashboard.	
   ngOnInit() {
     var userDetail:any = JSON.parse(localStorage.getItem('userDetail'));
     let currentState  = this;
@@ -24,7 +25,6 @@ export class DashBoardComponent implements OnInit {
     this.dashboardService.getAllEmployee(userDetail.email).subscribe(function(data){
         currentState.employeeDetailsList = data;
         currentState.emptyRecords = false;
-        //console.log(currentState.employeeDetailsList);
      },(err=> {
                     
      }));

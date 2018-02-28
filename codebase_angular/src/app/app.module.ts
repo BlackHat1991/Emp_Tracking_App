@@ -23,13 +23,12 @@ import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AuthenticationService } from './home/authentication.service';
 import { AccountComponent } from './account';
-import { CustomerComponent } from './customer';
+import { EmployeeComponent } from './employee';
 import { UserComponent } from './user';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashBoardComponent } from './dashBoard';
 import { DashboardService } from './dashBoard/dashboard.component.service';
-import { CustomerService } from './customer/customer.component.service';
-import { GroupService } from './group/group.component.service';
+import { EmployeeService } from './employee/employee.component.service';
 import { CommonService } from './reusableComponents/common.service';
 import { UserService } from './user/user.component.service';
 import { AuthGuard } from './_guards/index';
@@ -46,7 +45,7 @@ const APP_PROVIDERS = [
   ...APP_RESOLVER_PROVIDERS,
   AppState,
   DashboardService,
-  CustomerService,
+  EmployeeService,
   CommonService,
   UserService,
   AuthenticationService,
@@ -89,7 +88,7 @@ type StoreType = {
     HomeComponent,
     AccountComponent,
     FileSelectDirective,
-    CustomerComponent,
+    EmployeeComponent,
     UserComponent,
     DashBoardComponent,
   ],

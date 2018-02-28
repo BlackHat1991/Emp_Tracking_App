@@ -1,7 +1,5 @@
 <div class="login-wrap" style="padding-top: 6%;">
 	<div class="login-container">
-		<!--<img alt="electems logo" src="../../IOT/assets/img/electems_logo.png">-->
-		<!--<h3>Electems Bussiness Solutions - IOT</h3>-->
 		<div class="login-box" style="padding:4px">
 			<div *ngIf="loadingError" type="danger">
 				<p style="color:red;">
@@ -20,7 +18,6 @@
 					</md-input-container>
 
 					<button id="loginButton" class="btn btn-primary active" md-raised-button style="text" (click)="login(userDetails)">Login</button>
-					<button class="btn btn-success active pull-right" md-raised-button style="text" (click)="cancel()">Back</button>
 				</md-card-content>
 			</md-card>
 		</div>

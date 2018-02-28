@@ -5,7 +5,7 @@ import { Component, ViewEncapsulation, OnInit, Input, Output, EventEmitter, Opti
 import { Router, NavigationEnd } from '@angular/router';
 import { AppState } from './app.service';
 import { Idle, DEFAULT_INTERRUPTSOURCES } from '@ng-idle/core';
-import { CustomerService } from './customer/customer.component.service';
+import { EmployeeService } from './employee/employee.component.service';
 import { AppConstantService } from './applicationConstants/applicationConstant.component.service';
 import { LocalDataSource, ViewCell } from 'ng2-smart-table';
 import { MdDialog, MdDialogRef } from '@angular/material';
@@ -114,7 +114,7 @@ export class AppComponent {
     isReload;
     loginMenu = true;
     allDeviceList = [];
-  constructor(public appState: AppState, public router: Router,private idle: Idle, public customerService: CustomerService, public userService: UserService) {
+  constructor(public appState: AppState, public router: Router,private idle: Idle, public customerService: EmployeeService, public userService: UserService) {
         idle.setIdle(5);
         idle.setTimeout(900);
         idle.setInterrupts(DEFAULT_INTERRUPTSOURCES);

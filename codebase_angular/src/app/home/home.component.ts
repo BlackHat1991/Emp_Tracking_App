@@ -9,7 +9,7 @@ import { CommonService } from '../reusableComponents/common.service';
 declare var $: any;
 
 @Component({
-  selector: 'home',  // <home></home>
+  selector: 'home',  
   providers: [
     
   ],
@@ -26,8 +26,8 @@ export class HomeComponent {
 
   // TypeScript public modifiers
   constructor(public appState: AppState, public router: Router, public authenticationService: AuthenticationService,  public userService: UserService, public appComponent: AppComponent, public commonService: CommonService) {
-    this.userDetails.userName = "user_test@test.com";
-    this.userDetails.password = "test";
+    this.userDetails.userName = "user1@test.com";
+    this.userDetails.password = "12345";
   }    
   
   login(userDetails) {
@@ -45,10 +45,6 @@ export class HomeComponent {
 						localStorage.setItem('userRole', this.userList.role);
                         localStorage.setItem('userName',this.userList.email);                        
                         localStorage.setItem('userDetail', JSON.stringify(this.userList));
-                        document.getElementById("demo1").style.display = "none";
-                        $('#demo5').removeClass('modal');
-                        $('#demo6').removeClass('modal-dialog');
-                        $('#demo7').removeClass('modal-content');
 						//window.location.reload();
 						if(localStorage.getItem('userRole') === 'ADMIN'){
 							currentState.router.navigate(['/user']);
@@ -78,15 +74,5 @@ export class HomeComponent {
 
   submitState(value: string) {
     this.appState.set('value', value);
-  }
-
-  cancel() {
-    document.getElementById("demo1").style.display = "block";
-	document.getElementById("demo").style.display = "none";
-    $('li').removeClass('active');
-    $("li[id*='home']").addClass('active');
-    $("div[id*='demo5']").addClass('modal');
-    $("div[id*='demo6']").addClass('modal-dialog');
-    $("div[id*='demo7']").addClass('modal-content');
   }
 }
