@@ -31,7 +31,7 @@ public class UserController extends AdminController{
 	@Inject
 	EmployeeDetailsLogRepository employeeDetailsLogRepository;
     
-    /*
+    /**
      * This method is used to Create/update the user.
      */
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
@@ -54,7 +54,7 @@ public class UserController extends AdminController{
 		return new ResponseEntity<User>(user, HttpStatus.OK);
 	}
     
-    /*
+    /**
      * This method is used to delete the Employee
      */
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
@@ -71,6 +71,12 @@ public class UserController extends AdminController{
 		return new ResponseEntity<List<User>>(users, HttpStatus.OK);
 	}
     
+    /**
+     * 
+     * @param userEmail
+     * @return Employee details after login
+     * @throws Exception
+     */
     @RequestMapping(value = "/listByEmail", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<User> fetchUserByUserEmail(String userEmail) throws Exception {
 		User users = userRepository.findOneByEmail(userEmail);
@@ -94,7 +100,7 @@ public class UserController extends AdminController{
 		return new ResponseEntity<User>(HttpStatus.INTERNAL_SERVER_ERROR);
 	}
     
-    /*
+    /**
 	 * This method is used to fetch data based on selected user under dashboard dropdown.
 	 */
 	@RequestMapping(value = "/fetchBySelectedCustomer", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

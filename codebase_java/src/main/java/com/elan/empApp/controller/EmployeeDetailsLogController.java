@@ -32,6 +32,10 @@ public class EmployeeDetailsLogController extends AbstractController {
 	@Inject
 	private UserRepository userRepository;
 	
+	/**
+	 * @return all the employess last loggin details
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/allLogs",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
@@ -41,6 +45,12 @@ public class EmployeeDetailsLogController extends AbstractController {
 		return new ResponseEntity<List<EmployeeDetailsLog>>(employeeDetailsLogs, HttpStatus.OK);
     }
 	
+	/**
+	 * Fetch the employee by id
+	 * @param userEmail to fetch by id.
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/allEmpLogs",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
@@ -51,6 +61,12 @@ public class EmployeeDetailsLogController extends AbstractController {
 		return new ResponseEntity<List<EmployeeDetailsLog>>(employeeDetailsLogs, HttpStatus.OK);
     }
 	
+	/**
+	 * Updates the status of employee.
+	 * @param userEmail
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/update",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
