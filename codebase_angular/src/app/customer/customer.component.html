@@ -1,0 +1,33 @@
+    <md-list >
+    <div class="alert alert-danger" *ngIf="saveError">
+        <h4 style="color:red;text-align:center">
+              {{error}}
+            </h4>
+    </div>
+    <md-toolbar>
+        Employee Status
+        <span class="app-toolbar-filler"></span>
+    </md-toolbar>
+    
+    <div class="col-xs-12" style="margin-top:2%" *ngIf="emptyRecords">
+        <h4 style="color:blue;text-align:center">No Records are Found</h4>
+    </div>
+    <br>
+
+    <div [ngBusy]="{busy: busy, message: 'Loading...'}">
+        <div class="smart-table-container">
+            <md-grid-list cols="4" rowHeight="3em" [style.background]="'lightblue'" *ngIf="allUserList?.length > 0">
+                <md-grid-tile class="modal-title qr-header">Name</md-grid-tile>
+                <md-grid-tile class="modal-title qr-header">Employee Role</md-grid-tile>
+                <md-grid-tile class="modal-title qr-header">Last Check In  Time</md-grid-tile>
+                <md-grid-tile class="modal-title qr-header">Current Status</md-grid-tile>
+            </md-grid-list>
+            <md-grid-list cols="4" rowHeight="3em" *ngFor="let c of allUserList; let i=index" style="cursor:pointer;" (click)="showCustomerForm('edit', c)" [class.active]="i == selectedRow" [ngClass]="'color' + (i % 2)">
+                <md-grid-tile>{{c.firstName}} {{c.lastName}}</md-grid-tile>
+                <md-grid-tile>{{c.role}}</md-grid-tile>
+                <md-grid-tile>{{c.updatedDate | date:'yyyy-MM-dd HH:mm a z' }}</md-grid-tile>
+                <md-grid-tile>{{c.currentStatus}}</md-grid-tile>
+            </md-grid-list>
+        </div>
+    </div>
+</md-list>

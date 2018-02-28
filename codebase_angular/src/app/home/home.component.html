@@ -1,0 +1,28 @@
+<div class="login-wrap" style="padding-top: 6%;">
+	<div class="login-container">
+		<!--<img alt="electems logo" src="../../IOT/assets/img/electems_logo.png">-->
+		<!--<h3>Electems Bussiness Solutions - IOT</h3>-->
+		<div class="login-box" style="padding:4px">
+			<div *ngIf="loadingError" type="danger">
+				<p style="color:red;">
+					You've entered an invalid username/password combination. Please try again.
+				</p>
+			</div>
+			<md-card>
+				<md-card-content >
+					<md-input-container class="full-width md-block">
+                        <label>User Name</label>
+						<input mdInput id="username" type="text" [(ngModel)]="userDetails.userName">
+					</md-input-container>
+					<md-input-container class="full-width md-block">
+                        <label>Password</label>
+						<input mdInput id="password" type="password" [(ngModel)]="userDetails.password">
+					</md-input-container>
+
+					<button id="loginButton" class="btn btn-primary active" md-raised-button style="text" (click)="login(userDetails)">Login</button>
+					<button class="btn btn-success active pull-right" md-raised-button style="text" (click)="cancel()">Back</button>
+				</md-card-content>
+			</md-card>
+		</div>
+	</div>
+</div>

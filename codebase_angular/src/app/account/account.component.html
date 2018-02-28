@@ -1,0 +1,26 @@
+<!--<md-card>-->
+    <md-toolbar>
+        Account
+    </md-toolbar>
+   <div class="container">
+        <div class="alert alert-danger" *ngIf="validationFlag" style="white-space: pre;margin-top:2%" [innerHTML]="errorMessage"></div>{{successMessage}}
+       <div class="alert alert-success" *ngIf="validationFlag" style="white-space: pre;margin-top:2%">{{successMessage}}</div>
+        <div class="form-group">
+            <label>First Name<sup>*</sup></label>
+            <input type="text" name="firstName" required [(ngModel)]="userDetails.firstName" class="form-control" #firstName="ngModel">
+        </div>
+        <div class="form-group">
+            <label>Last Name<sup>*</sup></label>
+            <input type="text" name="lastName" required [(ngModel)]="userDetails.lastName" class="form-control" #lastName="ngModel">
+        </div>
+        <div class="form-group">
+            <label>Email<sup>*</sup></label>
+            <input type="text" name="email" required [(ngModel)]="userDetails.email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Change Password<sup>*</sup></label>
+            <input type="password" name="password" required [(ngModel)]="userDetails.password" class="form-control">
+        </div>
+        <button class="btn btn-success active" md-raised-button style="text" (click)="saveUser(userDetails)">Save</button>
+        </div>
+<!--</md-card>-->

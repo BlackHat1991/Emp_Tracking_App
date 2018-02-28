@@ -1,0 +1,6 @@
+[1002/155146.649:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1002/155146.650:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1002/155146.650:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[1002/155146.650:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights.  (0xc0000022)
+[1002/155146.734:ERROR:exception_snapshot_win.cc(87)] thread ID 7752 not found in process
+[1002/155146.734:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed

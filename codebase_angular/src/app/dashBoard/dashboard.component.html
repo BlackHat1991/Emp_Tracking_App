@@ -1,0 +1,30 @@
+<md-list>
+    <div [ngBusy]="{busy: loading, message: 'Loading...'}">
+        <div id="dashboard" >
+            <md-toolbar>
+                Dash Board
+                <button id="dropchange" (click)="callMethod()" style="display:none"></button>
+                <span class="app-toolbar-filler"></span>
+            </md-toolbar>
+            
+        </div>
+        
+        <div>
+            Your are successfully Logged In.
+        </div><br>
+    
+        <div class="smart-table-container">
+            <md-grid-list cols="3" rowHeight="3em" [style.background]="'lightblue'" [hidden]="!emptyRecords">
+                <md-grid-tile class="modal-title qr-header">Check In</md-grid-tile>
+                <md-grid-tile class="modal-title qr-header">Check out</md-grid-tile>
+                <md-grid-tile class="modal-title qr-header">Status</md-grid-tile>
+            </md-grid-list>
+
+            <md-grid-list cols="3" rowHeight="3em" *ngFor="let c of employeeDetailsList; let i=index" style="cursor:pointer;" (click)="showUserForm('edit', c)" [class.active]="i == selectedRow" [ngClass]="'color' + (i % 2)" class="scroll-container">
+                <md-grid-tile>{{c.checkInTime  | date:'yyyy-MM-dd HH:mm a z'}}</md-grid-tile>
+                <md-grid-tile>{{c.checkInOut  | date:'yyyy-MM-dd HH:mm a z'}}</md-grid-tile>
+                <md-grid-tile>{{c.status}}</md-grid-tile>
+            </md-grid-list>
+        </div>
+    </div>
+</md-list>

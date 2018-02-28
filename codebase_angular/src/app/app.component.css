@@ -1,0 +1,215 @@
+
+#header {
+  height: 64px;
+  background: #fff;
+  position: fixed;
+  header: 0;
+  left: 0;
+  width: 100%;
+  z-index:102;
+}
+
+#header h1#logo {
+  float: left;
+  margin: 0;
+}
+
+/*#header h1#logo a {
+  background: url(../images/electems_logo.png) no-repeat top left;
+  width: 194px;
+  height: 48px;
+  margin: 8px;
+  display: block;
+  text-indent: -9999px;
+}*/
+
+#header .router-link-active {
+  color: #C83434;
+}
+
+#header .color {
+  display: block;
+  height: 4px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+#header #menu {float:left;padding:17px 40px 0 0;}
+
+#container {
+	padding:1px 20px 20px 20px;
+}
+
+.color {
+  background-color: rgba(195, 30, 30, 0.9) !important;
+}
+
+/*.shadow {
+  background: url(../images/top-shadow.png) repeat-x;
+  height: 35px;
+  position: fixed;
+  top: 68px;
+  width: 100%;
+}*/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+a.active {
+     z-index: 2 !important;
+    color: #fff !important;
+    background-color: #31708f !important;
+    border-color: #337ab7 !important;
+}
+
+.progress-bar {
+      color: black ;
+}
+
+ng2-smart-table table,th, td, tr {
+    font-size: 12px !important;
+}
+
+.text-inside-grid {
+    position: absolute;
+    left: 5px;
+}
+
+.panel-panel3{
+    border-color: #f1c40f;
+}
+
+.panel-panel3 > .panel-heading {
+      background-color: #f1c40f;
+      border-color: #f1c40f;
+}
+
+.panel-panel1{
+     border-color: #e74C3c;
+}
+
+.panel-panel1 > .panel-heading {
+      background-color: #e74C3c;
+      border-color: #e74C3c;
+}
+
+.panel-panel2{
+    border-color: #e67e22;
+}
+
+.panel-panel2 > .panel-heading {
+      background-color: #e67e22;
+      border-color: #e67e22;
+}
+
+.panel-panel4{
+    border-color: #2ecc71;
+}
+
+.panel-panel4 > .panel-heading {
+      background-color: #2ecc71;
+      border-color: #2ecc71;
+}
+
+.textHead {
+	font-size:14px;
+	font-weight: bold;
+}
+
+.min-menu-btn {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.left-nav {
+    z-index: 1000;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-property: width, height;
+    -webkit-transition-property: width, height;
+    top: 51px;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    padding-top: 10px;
+    background-color: #f8f8f8;
+}
+
+.right-nav {
+    z-index: 1000;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-property: width, height;
+    -webkit-transition-property: width, height;
+    top: 51px;
+    bottom: 0px;
+    right: 0px;
+    padding: 10px;
+    padding-top: 10px;
+    background-color: #f8f8f8;
+}
+
+.smart-table-container{
+    overflow-x: auto;
+}
+
+.ng2-smart-table  {
+    min-width: 800px;
+}
+
+md-grid-list {
+  min-width: 750px;
+}
+
+.mat-slide-toggle {
+    margin: 0px 0 !important;
+}
+.modal {
+    transform: translate(0%,25%) !important;
+}
+
+md-slide-toggle:not(.mat-checked):not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: red;
+}
+
+md-slide-toggle:not(.mat-checked):not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: red;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: green;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: green;
+}
